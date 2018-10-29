@@ -19,7 +19,6 @@ import java.nio.channels.ReadableByteChannel;
 @RestController
 public class GetDataController {
 
-//    @Scheduled(fixedDelay = 30000)
     public void getDataFiles(){
         //Create the Rest Template
         RestTemplate restTemplate = new RestTemplate();
@@ -31,10 +30,11 @@ public class GetDataController {
         HttpEntity entity=new HttpEntity(headers);
 
 
-        //get the URL
+        //get the DATA MALL URL for all the months needed
 
         for(int month=1;month<=1;month++) {
 
+            //adjusting the iteration according to file name
             String monthIter;
             if(month<10){
                 monthIter="0"+month;
